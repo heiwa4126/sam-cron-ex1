@@ -21,6 +21,12 @@ Resources:
           Type: Schedule
           Properties:
             Schedule: rate(1 minute)
+        HelloWorldApi:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
   HelloWorldFunctionLogGroup:
     Type: AWS::Logs::LogGroup
     DependsOn: HelloWorldFunction
